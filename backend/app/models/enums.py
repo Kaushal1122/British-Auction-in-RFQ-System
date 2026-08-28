@@ -1,0 +1,63 @@
+import enum
+
+
+class RFQStatus(str, enum.Enum):
+    DRAFT = "DRAFT"
+    PUBLISHED = "PUBLISHED"
+    AUCTION_ACTIVE = "AUCTION_ACTIVE"
+    CLOSED = "CLOSED"
+    CANCELLED = "CANCELLED"
+
+
+class RFQSupplierStatus(str, enum.Enum):
+    INVITED = "INVITED"
+    ACCEPTED = "ACCEPTED"
+    DECLINED = "DECLINED"
+
+
+class QuoteStatus(str, enum.Enum):
+    DRAFT = "DRAFT"
+    SUBMITTED = "SUBMITTED"
+    WITHDRAWN = "WITHDRAWN"
+
+
+class AuctionStatus(str, enum.Enum):
+    SCHEDULED = "SCHEDULED"
+    LIVE = "LIVE"
+    PAUSED = "PAUSED"
+    CLOSED = "CLOSED"
+    CANCELLED = "CANCELLED"
+
+
+class AuctionRoundStatus(str, enum.Enum):
+    PENDING = "PENDING"
+    ACTIVE = "ACTIVE"
+    COMPLETED = "COMPLETED"
+    CANCELLED = "CANCELLED"
+
+
+class ExtensionTrigger(str, enum.Enum):
+    BID_RECEIVED = "BID_RECEIVED"
+    ANY_RANK_CHANGE = "ANY_RANK_CHANGE"
+    L1_RANK_CHANGE = "L1_RANK_CHANGE"
+
+
+class ActorType(str, enum.Enum):
+    BUYER = "BUYER"
+    SUPPLIER = "SUPPLIER"
+    SYSTEM = "SYSTEM"
+
+
+class EventType(str, enum.Enum):
+    RFQ_CREATED = "RFQ_CREATED"
+    RFQ_PUBLISHED = "RFQ_PUBLISHED"
+    SUPPLIER_INVITED = "SUPPLIER_INVITED"
+    QUOTE_SUBMITTED = "QUOTE_SUBMITTED"
+    AUCTION_CREATED = "AUCTION_CREATED"
+    AUCTION_STARTED = "AUCTION_STARTED"
+    ROUND_STARTED = "ROUND_STARTED"
+    BID_SUBMITTED = "BID_SUBMITTED"
+    BID_REJECTED = "BID_REJECTED"
+    AUCTION_EXTENDED = "AUCTION_EXTENDED"
+    ROUND_COMPLETED = "ROUND_COMPLETED"
+    AUCTION_CLOSED = "AUCTION_CLOSED"
